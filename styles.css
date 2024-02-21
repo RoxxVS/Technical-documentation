@@ -1,0 +1,115 @@
+:root {
+    --color-body: #EFEBCE;
+    --color-prim: #E6E0B2;
+    --color-sec: #DCD493;
+    --color-extra: #D8A48F;
+
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2vw;
+}
+body {
+    background-color: var(--color-body);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+}
+nav header {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    background-color: var(--color-sec);
+}
+nav div.links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+nav div.links a {
+    height: 20%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    background-color: var(--color-prim);
+    border: 1px solid var(--color-sec);
+    padding: 10% 0;
+}
+nav div.links a:hover {
+    background-color: var(--color-extra);
+    border: 1px solid var(--color-extra);
+}
+div.sections {
+    position: relative;
+    width: 70%;
+    left: 25%;
+}
+section {
+    margin: 2% 0;
+    padding: 5% 5%;
+    border-bottom: 1px solid var(--color-extra);
+}
+section header {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h4 {
+    font-size: 1.4rem;
+}
+section ol {
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+section ol  li {
+    margin-top: 1%;
+}
+section ol ul {
+    margin-left: 5%;
+    list-style-type: none;
+}
+code {
+    margin-left: 10%;
+    font-size: 0.8rem;
+}
+
+
+@media only screen and (max-width: 280px) {
+    nav {
+        flex-direction: row;
+        width: 100%;
+        height: 30px;         
+        margin: 1% auto;
+        opacity: 1;
+    }
+    nav div.links {
+        flex-direction: row;
+    }
+    nav div.links a {           
+        padding: 0;
+        height: 30px;
+    }
+    nav div.links a:nth-child(3n) {           
+        padding: 0 0;
+    }
+    div.sections {
+        width: 100%;
+        left: 0;
+        top: 35px;
+    }
+}
